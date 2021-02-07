@@ -1,0 +1,92 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.outer-container {
+  margin-bottom: 45%;
+  padding-right: 1%;
+  height: auto;
+}
+.container {
+  height: 50%;
+  width: 100%;
+  background: lightgrey;
+  display: grid;
+  /* grid-template-columns: repeat(5, 1fr); */
+  /* grid-template-rows: repeat(auto-fill, 1fr); */
+  padding: 0.5%;
+  /* gap: 1%; */
+}
+
+.tile {
+  border: 1px solid black;
+  background: lightblue;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  margin: 2%;
+  cursor: pointer;
+}
+.tile:active {
+  animation: activeTile 10s linear;
+}
+@keyframes activeTile {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.oddTile {
+  background: lightgrey;
+  color: lightgrey;
+}
+
+.btn {
+  background: black;
+  color: white;
+  width: 100%;
+  margin: 10% 0;
+  height: 5rem;
+  font-size: 3em;
+  cursor: pointer;
+}
+.btn:active {
+  transform: translateY(4px);
+}
+
+@media only screen and (min-width: 450px) {
+  /* For big phones: */
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tile {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop and tablet: */
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tile {
+    font-size: 3em;
+  }
+
+  .btn {
+    width: 55%;
+    margin: 5% 22%;
+    font-size: 2.5em;
+  }
+}
